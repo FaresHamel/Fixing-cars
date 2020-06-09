@@ -1,0 +1,118 @@
+@mixin clearFix {
+    &::after{
+        content: "";
+        display:block;
+        clear: both;
+    }
+} 
+
+@mixin positionb { 
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
+
+//MEDIA QUERY MANAGER
+
+// 0 - 600px das Handy
+// 600px - 900px das Tablet
+// 900px -1200px das Tablet groß
+//[ 1200px - 1800px Normal Style apply ]
+// + 1800px groß Computer
+
+@mixin responsive($Device) {
+    
+    @if $Device == phone {
+        @media (max-width:600px) {
+            @content
+        };
+    }
+    
+        @if $Device == tablet-mini {
+            @media (max-width:900px) {
+                @content
+            };
+        }
+            
+        @if $Device == tablet-groß {
+         @media (max-width:1200px) {
+                        @content
+        };
+      }
+                    @if $Device == groß-laptop {
+                        @media (max-width:1800px) {
+                            @content
+                        };
+                    }
+                
+            
+        
+    }
+
+
+
+
+
+
+
+
+
+
+// // Sass
+// //Die Variabls von Sass
+// $varible-color:black;
+// $variable-space:10px;
+// $variable-margin:100px;
+// $variable-weight:400;
+// $variable-background-colo:#eee;
+// $variable-text-color:black;
+// //Operateur Arithmitique + - / * % 
+
+// $main-variable-margin:$variable-margin -10;
+// $main-variable-weight:$variable-weight / 4;
+
+// //@extend
+//  //exemple
+
+//  .main{
+//      background-color:$variable-background-colo;
+//      color: $variable-text-color;
+
+//  }
+//  .class1{
+//     @extend .main;
+//  }
+
+//  //placeholder selector %
+
+//  %main{
+//      //-webkit-
+//      //-moz-
+    
+//      @if expr {
+         
+//      }@else{
+
+//      }
+
+//      @for $variable from 1 through 16{
+//          //interpolation #{$variable}
+//      }
+
+//      //pour utilise c'est class dans extend se touts
+//      transform: translate(50%,50%);
+//  }
+ 
+//  //import @import file
+//  //#($variable)
+
+//  $list:faceboock twiter youtube linkedline instagrame;
+
+//  @each $var in $list {
+
+//      .#{$var}{
+//          background-color: $variable-text-color;
+//      }
+//  }
+

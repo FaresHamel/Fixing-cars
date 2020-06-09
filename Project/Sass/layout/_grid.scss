@@ -1,0 +1,43 @@
+.row{
+     width:$gide-width;
+   //  background-color:$gride-color-background;
+    margin:0 auto;/*top right bottom left*/
+   
+    @include clearFix;
+
+    &:not(:last-child){//le
+        margin-bottom:$gide-vertical;
+    }
+
+
+    [class^="col-"]{
+        float:left;
+        &:not(:last-child){
+            margin-right:$gride-horisontale;
+        }
+
+        @include responsive(tablet-groß){
+         width:100%;
+         }
+    }
+
+     .col-1-of-2{
+        width:calc((100% -  #{$gride-horisontale})/2);
+   }
+
+     .col-1-of-3{
+        width:calc((100% - 2 * #{$gride-horisontale})/3);
+     }
+     .col-2-of-3{
+        width:calc(2*((100% - 2 * #{$gride-horisontale})/3) + #{$gride-horisontale});
+     }
+     .col-1-of-4{
+        width:calc((100% - 3 * #{$gride-horisontale})/4);
+     }
+     .col-2-of-4{
+        width:calc(2*((100% - 3 * #{$gride-horisontale})/4) + #{$gride-horisontale});
+     }
+     .col-3-of-4{
+        width:calc((3 * (100% - 3 * #{$gride-horisontale})/4 +  2 * #{$gride-horisontale}));
+     }
+}

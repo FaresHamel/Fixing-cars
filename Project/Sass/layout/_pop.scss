@@ -1,0 +1,111 @@
+.pop{
+    visibility: hidden;
+    opacity:0;
+    width:100%;
+    height:100vh;
+    position: fixed;
+    top:0;
+    left:0;
+    z-index:3010;
+    background-color:rgba(3, 0, 0, 0.93);
+    transition: all .5s;
+    // position:relative;
+
+    &__left{
+        // height: 100%;
+        //  float: left;
+     width:33.3333%;
+     display: table-cell;
+     margin-bottom:0;
+    }
+    &__right{
+         //  float: left;
+     width:66.6667%;
+     display: table-cell;
+     vertical-align: middle;
+     padding:3rem 5rem;
+    }
+    &__paragraphe{
+        //option für Sätze
+        column-count:2;
+        column-gap:5rem;
+
+        column-rule-width:1px;
+        column-rule-style:solid;
+        column-rule-color:#eee;
+
+        -moz-column-count:2;
+        -moz-column-gap:5rem;
+
+        -moz-column-rule-width:1px;
+        -moz-column-rule-style:solid;
+        -moz-column-rule-color:#eee;
+
+        -ms-column-count:2;
+        -ms-column-gap:5rem;
+
+        -ms-column-rule-width:1px;
+        -ms-column-rule-style:solid;
+        -ms-column-rule-color:#eee;
+
+       -moz-hyphens: auto;
+       -webkit-hyphens:auto;
+       -ms-hyphens: auto;
+       hyphens: auto;
+
+       font-size:1.4rem;
+       margin-top:-4rem;
+       margin-bottom:3rem;
+    }
+    &__image{
+        display: block;
+        width:100%;
+        height:37vh;
+    }
+
+//function target href
+
+    &__clauses{
+
+        transition:all .05s ease-out;
+           &:link,&:visited{
+            position: absolute;
+            top:1rem;
+            right:3rem;
+            font-size: 3.5rem;
+            font-weight:200;
+            color:rgb(139, 132, 132);
+            text-decoration: none;
+            display:inline-block;
+           }
+           &:hover,&:active{
+               color:green;
+               font-weight:400;
+           }
+        }
+
+        &__content{
+            @include positionb;
+            background-color:white;
+            width:75%;
+            border-radius:3px;
+            display: table;
+            overflow: hidden;
+            transform:translate(-50%,-50%) scale(.5);
+            transition: all .4s .3s ease-out;
+            opacity:0;
+          }
+
+    &:target{
+        opacity:1;
+        visibility: visible;
+    }
+
+     //Open State
+
+     &:target &__content{
+         transform: translate(-50%,-50%) scale(1);
+         opacity:1;
+     }
+
+}

@@ -1,0 +1,50 @@
+.btn{
+    &:link,&:visited{
+        text-transform:uppercase;
+        text-decoration:none;
+        font-size:1.4rem;
+        padding:1.5rem 4rem;/*top right bottom left*/
+        display:inline-block;
+        border-radius:10rem;
+        transition:all 0.5;
+        animation: movBottom;
+        animation-timing-function: ease-in-out;
+        animation-direction:normal;
+        animation-duration:3s;
+        animation-delay: .2s;
+        animation-fill-mode: backwards;
+    }
+    &:hover{
+        transform:translateY(-.3rem);
+        box-shadow:0rem 1rem 2rem rgba(5, 5, 5, 0.103);
+    }
+    &:active,&:focus{
+        outline: none;
+        transform: translateY(1px);
+        box-shadow:0rem .5rem 2rem black;
+    }
+    &--white{
+        background-color: white;
+        color:#777;
+    }
+    &--green{
+        background-image: linear-gradient(to right,$color-premary-image-Light-green-left,$color-primary-imag-Light-green-right);
+        color: white;
+        font-size:110em;
+        font-weight: 200;
+        position: absolute;
+        left:45%;
+    }
+    &--button{
+        background-image: linear-gradient(to right,$color-premary-image-Light-green-left,$color-primary-imag-Light-green-right);
+        color: white;
+        font-size:1.5rem;
+        font-weight: 200;
+        width: 12rem;
+        padding:1rem;
+        border-radius:10rem;
+        transition:all .5s ease-in-out;
+        position: absolute;
+        left:10%;
+    }
+}

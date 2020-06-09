@@ -1,0 +1,37 @@
+.header{
+    height:95vh;/*95% of height of web page*/
+
+    background-image: linear-gradient(to left top,$color-primary-imag-Light-green-right,$color-premary-image-Light-green-left) ,url("Bilder//imageMechatroniker.jpg");
+    /*gredien linear*/
+    
+    background-size:cover;
+    
+    background-position:top;/*if du brauchen top the use if change the position of navigateur the bottom or top stay not chage but the top change*/
+    
+    clip-path: polygon(0 0,100% 0,100% 75vh,0 100%);
+
+    position: relative;
+
+    transform-style:flat;
+    &__logo-box {
+        position: absolute;
+        left:3rem;
+        top:3rem;
+    }
+    &__logo{
+        height:3.5rem;
+        width:10rem;
+        transform: translate3d(1,1,5rem);
+        opacity:0.2;
+        clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);  
+    }
+    &__logo:hover{
+        animation:movingRight;
+        animation-duration:1s;
+        animation-delay:0s;
+        animation-iteration-count:infinite;
+        animation-timing-function: ease-in-out;
+        animation-direction: alternate;
+    }
+    
+}

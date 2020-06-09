@@ -1,0 +1,49 @@
+*,
+*::after,
+*::before
+{
+    margin:0px;
+    -moz-box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+    box-sizing:border-box;
+    padding:0px;
+    border:0px;
+}
+html{
+    /* root font size */
+    // font-size:62.5%;
+    font-size:62.5%;
+
+    // @include responsive(phone){
+    //     font-size:45.5%;
+    // }
+   
+    @include responsive(groß-laptop){
+        font-size:60%;
+    }
+
+    @include responsive(tablet-groß){
+        font-size:55.5%;
+    }
+    @include responsive(tablet-mini){
+        font-size:50%;
+    }
+    
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif,sans-serif;
+    font-weight: 400;
+    // font-size: 16px;
+    box-sizing: border-box;
+    line-height:1.7;
+    color:$color-premary;
+    padding:3rem; 
+
+    @include responsive(tablet-mini){
+        padding: 0px;
+    }
+    @include responsive(phone){
+        padding: 0px;
+    }
+}

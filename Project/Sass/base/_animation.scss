@@ -1,0 +1,61 @@
+@keyframes movBottom{
+
+    0%{
+        transform: translateY(4rem);
+        opacity:0;
+    }
+    20%{
+        opacity:.2;
+    }
+    50%{
+        opacity:.4;
+    }
+    80%{
+        opacity:.6;
+    }
+    90%{
+        opacity:.7;
+        transform:translateY(-1rem);
+    }
+    100%{
+        opacity:.9;
+        transform: translateY(0rem);
+    }
+
+}
+
+@keyframes movingRight{
+
+    0%{
+      opacity:0;
+      transform:translateX(10rem) rotateY(180deg);
+    }
+    
+    80%{
+       opacity:1;
+       transform: translate(-2rem) rotateY(180deg); 
+    }
+   100%{
+     opacity:1;
+     transform: translate(0rem);
+   }
+}
+
+
+@keyframes movingLeft{
+
+    0%{
+      opacity:0;
+      transform:translateX(-10rem);
+    }
+   
+    
+    80%{
+       opacity:1;
+       transform: translate(2rem); 
+    }
+   100%{
+     opacity:1;
+     transform: translate(0rem);
+   }
+}

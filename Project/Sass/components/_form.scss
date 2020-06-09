@@ -1,0 +1,99 @@
+.form{
+
+
+    &__group:not(:last-child){
+
+        margin-bottom:2rem;
+
+    }
+    &__input{
+     text-transform:capitalize;
+     font-family: inherit;
+     font-size:1.6rem;
+     color:inherit;
+     padding:1.5rem 2rem;
+     border-radius:2px;
+     border: none ;
+     width: 100%;
+     display:block;
+     border-bottom:3px solid transparent;
+     transition:all .4s ease-in-out;
+
+     &::-webkit-input-placeholder{
+        color:#999;
+    }
+    //für schreibt im imput
+    &:focus{
+        outline:none;
+        border-bottom:3px solid rgb(39, 228, 14);
+        box-shadow:0 1rem 2rem rgba(8, 8, 8, 0.096);
+       }
+
+    &:focus:invalid{
+        border-bottom:3px solid rgb(228, 64, 14);
+    }
+
+    }
+
+    &__label{
+      font-size: 1.6rem;
+      font-weight: 400;
+      margin-left: 2rem;
+      margin-top: .7rem;
+      display: block;
+      transition:all 1s;
+    }
+    &__input:placeholder-shown + &__label{
+         opacity:0;
+         visibility:hidden;
+         transform: translateY(-2rem);
+    }
+
+    &__radio--group{
+
+        width:49%;
+        display:inline-block;
+        font-size:1.6rem;
+    }
+    &__radio--input{
+        cursor: pointer;
+        display:none;
+    }
+
+    &__radio--label{
+        font-size:1.6rem;
+        cursor: pointer;
+        position:relative;
+        padding-left:5rem;
+
+    }
+    &__radio--button{
+         height:3rem;
+         width:3rem;
+         border:5px solid $frabe-ein-gün;
+         border-radius:50%;
+         display: inline-block;
+         position: absolute;
+         top:-1;
+         left:0;
+        &::after{
+
+            content: "";
+            position: absolute;
+            top:50%;
+            left:50%;
+            width:1.3rem;
+            height:1.3rem;
+            border-radius:50%;
+            transform: translate(-50%,-50%);
+            background-color:$frabe-ein-gün;
+            transition:opacity .3s;
+            opacity:0;
+        }
+    }
+
+    &__radio--input:checked ~ &__radio--label > &__radio--button::after{
+
+        opacity:1;
+    }
+}

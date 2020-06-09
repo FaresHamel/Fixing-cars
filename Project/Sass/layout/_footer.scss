@@ -1,0 +1,79 @@
+.footer{
+    background-color:$frabe-eins-schwarz-schwer;
+    padding:10rem;
+    font-size:1.5rem;
+    color:white;
+
+    &__logo{
+    
+        text-align: center;
+        margin-bottom:5rem;
+        height:15rem;
+        margin-top:-6rem;
+        transition: all .5s ease-in-out;
+    
+    }
+    &__logo--box{
+        font-size:10rem;
+        font-weight: 900;
+        color:$frabe-footer-logo;
+       
+
+    }
+    &__navigation{
+      
+        border-top:1px solid white;
+        display: inline-block;
+        padding-top: 2rem;
+    }
+
+    &__list{
+     
+        list-style-type: none;
+
+    }
+
+    &__item{
+      display:inline-block;
+      &:not(:last-child){
+          margin-right:1.5rem;
+      }
+    }
+
+    &__link{
+
+       &:visited,&:link{
+        text-decoration:none;
+        color: white;
+        font-weight:100 !important;
+        text-transform:uppercase;
+        display: inline-block;
+       }
+    
+       &:hover,&:active{
+           color:$frabe-ein-gün;
+           background-color:$frabe-eins-schwarz-schwer;
+           box-shadow:0 1rem 2rem rgba(8, 8, 8, 0.801);
+           transform:rotate(5deg) scale(1.2);
+           transition:all .5s ease-in-out;
+       }
+    }
+
+    &__copyright{
+      
+       border-top:1px solid white;
+       padding-top: 2rem;
+       color:rgba(255, 255, 255, 0.507);
+       font-size:1.6rem;
+       font-weight:100;
+       transform:translate(-10%,0%);
+      
+       a{
+      
+        margin-right:1rem;  
+        margin-left:.2rem; 
+      
+         }
+    }
+      
+}

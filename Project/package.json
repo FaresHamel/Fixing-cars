@@ -1,0 +1,15 @@
+{
+  "name": "studierencss",
+  "version": "1.0.0",
+  "description": "HHHHHH",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass  Sass/main.scss Index.css -w"
+  },
+  "author": "Fares Hamel",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^4.13.1"
+  },
+  "dependencies": {}
+}

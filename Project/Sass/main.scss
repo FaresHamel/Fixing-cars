@@ -1,0 +1,97 @@
+
+/* Responsive Designe
+              - Desktop vs Mobile
+              - Responsive Image
+              - Fuilde Layout
+
+   Scalebel and Maintenable Code  
+          - Html Archtekter
+          - Name Classe
+          - Reulisable
+          - Organisation Fille
+          - esy To anderstande
+                                  
+           
+    Perfomance 
+          - Compress Image
+          - Use Images
+          - Use A css Processeur
+          - Less Code
+
+     DOM(Document Object Model )    
+
+
+     unity calcul font-size
+
+     BEM NOTATION IN HTML CODE
+
+
+     Archtekter auf Css 
+          Dimontion Auf Box(padding , Height ,Width , Margin , Border).
+          Box Type  (Display ..(inline-block,block,flex,inline)
+          position sheman (absluit , fixed ,float , normal..relatove)
+          Staking context(Z-index).
+
+     Font Size (Em auf Vater , Rem Auf Root ).
+     View Port (Vh x% height parent ,Vm x% width parent).
+     
+     BEM(Block Elemnt Model)
+
+
+     SASS(Extention auf Css Designe)
+        Varible in Sass - $varible    
+        
+        <!-- 
+
+      von 0 bis 600px -- > Handy
+      von 600px bis 900px -- > Tablet portrait
+      von 9000px bis 1200px -- > Tablet landscap
+      von 1200px bis 1800px -- > normal style applay
+      nach 1800px Big Desktop.
+
+
+      @mixen name(parametre){
+        
+      }
+
+     -->
+*/
+   
+   @import "abstracte/function";
+   
+   @import "abstracte/mixins";
+   
+   @import "abstracte/variable";
+
+   @import "base/animation";
+   
+   @import "base/bases";
+   
+   @import "base/itility";
+   
+   @import "base/typegraphique";   
+
+   @import "pages/home";
+   
+   @import "layout/header";
+
+   @import "layout/grid";
+
+   @import "components/botton";
+
+   @import "components/compositionBilder";
+
+   @import "components/storey";
+   
+   @import "components/videoComponent";
+
+   @import "components/form";
+   
+   @import "layout/footer"; 
+
+   @import "layout/navigation";
+
+   @import "layout/pop";
+
+
+

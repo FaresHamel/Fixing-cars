@@ -1,0 +1,18 @@
+
+.conten{
+    position: absolute;
+        top:0px;
+        left:0px;
+        height:100%;
+        width:100%;
+        opacity:.2;
+     &__content{
+        transform:skew(0deg);
+        height:100%;
+        width: 100%;
+        object-fit:cover;
+    }
+}
+.util{
+  color:rgb(94, 255, 1);
+}
